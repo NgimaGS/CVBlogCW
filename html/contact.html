@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- description of website-->
+    <meta name="description" content="Technology and Internet- Contact and feedback with navigation bar">
+    <meta name="keywords" content="Technology, Internet, impact, ffeedback, contact">
+    <meta name="author" content="Ngima Gelu Sherpa">
+    <meta http-equiv="refresh" content="100">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style4.css">
+    <!-- external css-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--internal css-->
+    <style>
+        textarea{
+            margin-top: 5px;
+            border-radius: 2%;
+            border: black 1px solid;
+        }
+        #mail{
+            border: black 1px solid;
+        }
+        label,#mail{
+            margin-top: 5px;
+        }
+        button{
+            margin-top: 5px;
+            border-radius: 1%;
+            border: black 1px solid;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<!-- body tag containing inline css for font family-->
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <header>
+        <div class="head">
+                <nav>
+                    <ul>
+                        <li><a href="../Index.html">HOME</a></li>
+                        <li><a href="CV.html">CV</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="research.html">RESEARCH</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <!-- sidebar container at the left side-->
+    <div class="sidebar">
+        <!-- for image inside the side bar-->
+        <div class="ppimg">
+        </div>
+        <h3>Admin:Ngima Gelu Sherpa</h3>
+        <div class="contact">
+            <p>Student<br>
+            <p>Kathmandu,Nepal<br></p>
+            <p>lostm456@gmail.com<br></p>
+            <p>+977-9841316011</p>
+        </div>
+        <div class="skill">
+            <h4>Social Sites</h4>
+                <p><a href="https://www.facebook.com/ngimagelusherpa"><i class="fab fa-facebook-square fa-2x"></i>FACEBOOK</a></p>
+                <p><a href="https://www.instagram.com/karma_tshering_sherpa/"><i class="fab fa-instagram fa-2x"></i>INSTAGRAM</a></p>
+        </div>
+        <div class="language">
+            <h4>Use-language</h4>
+            <p>English<br></p>
+        </div>
+    </div>
+    <!-- container at the right side of the website-->
+    <div class="mid">
+        <h2>Feedback</h2>
+        <!-- form for feedback-->
+        <form>
+            <!--Text area for feedback-->
+            <p>Feedback: <br><textarea name="message" rows="20" cols="70" placeholder="    Any Suggestions...??"></textarea></p>
+            <p>INSERT USER ID:</p>
+            <!-- select type with option-->
+            <select name="type">
+                <option value="ID">ID</option>
+                <option value="Name">Name</option>
+                <option value="E-mail">E-mail</option>
+                <option value="Code">Code</option>
+            </select>
+            <!--input text for email id-->
+            <input type="text" id="mail"/>
+            <!--radio buttons for gender type-->
+            <p>Gender: <input type="radio" name="gender" value="male" checked> Male 
+                       <input type="radio" name="gender" value="female"> Female </p>
+            <!-- check box for feedback-->
+            <div class="check">
+                <input type="checkbox" name="dependent" value="Bike">I like Technology.<br>
+                <input type="checkbox" name="independent" value="Car">I like Internet.<br>
+            </div>
+            <!-- date selection for submission-->
+            <div class="date">
+            Submission Date:
+            <input type="date"><br>
+            </div>
+            <!-- Submit button with onclick function-->
+            <button onclick="validinfo();">SUBMIT</button>
+        </form>
+    <!-- javascript -->
+    <script type="text/javascript">
+        //function to check validinfo
+        function validinfo()
+        { 
+            un = "";
+            var d = new Date()// assigns current date and time
+            var UserName = document.getElementById('mail').value;//gets the value of the element
+            //conditional output
+            if (UserName == un)
+            {
+                window.alert("You haven't entered your ID/Name");// alert pop up for empty box
+            }
+            else{
+                window.confirm("Send Feedback.. As"+" "+ UserName +" "+"on" + " "+ d);//confirmation pop up with imput id and date and time
+            }
+        }
+    </script>
+    </div>
+    <!--footer-->
+    <footer>
+        <p>COPYRIGHT &copy; 2020 NGIMA GELU SHERPA</p>
+        
+    </footer>
+</body>
+</html>
